@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './IndexPage.module.scss';
 
 const IndexPage = () => {
@@ -8,13 +9,13 @@ const IndexPage = () => {
 
       <ul>
         <li>
-          <a href='/'>Home</a>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          <a href='/blog'>Blog</a>
+          <Link to='/blog'>Blog</Link>
         </li>
         <li>
-          <a href='/about'>About</a>
+          <Link to='/about'>About</Link>
         </li>
       </ul>
     </div>
