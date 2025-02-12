@@ -3,23 +3,25 @@ import IndexPage from "../pages/IndexPage";
 import BlogPage from "../pages/BlogPage";
 import AboutPage from "../pages/AboutPage";
 import RootLayout from "../layouts/RootLayout";
+import ErrorPage from "../pages/ErrorPage";
 
 // 라우터 설정
 export const router = createBrowserRouter([
   {
-    path: '', // '/'(슬래시) 생략 가능
+    path: '/',
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
-        index: true, // '/'(슬래시) 겹쳐서 보이는거 싫음 → index: true로
+        index: true,
         element: <IndexPage />,
       },
       {
-        path: 'blog',// '/'(슬래시) 생략 가능
+        path: 'blog',
         element: <BlogPage />,
       },
       {
-        path: 'about',// '/'(슬래시) 생략 가능
+        path: 'about',
         element: <AboutPage />,
       },
     ],
